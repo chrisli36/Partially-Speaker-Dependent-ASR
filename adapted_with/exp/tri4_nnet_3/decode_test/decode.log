@@ -1,0 +1,10 @@
+steps/nnet2/decode.sh --cmd run.pl --nj 5 --num-threads 6 --transform-dir exp/tri3/decode_test exp/tri3/graph data/test exp/tri4_nnet_3/decode_test
+steps/nnet2/decode.sh: feature type is lda
+steps/nnet2/decode.sh: using transforms from exp/tri3/decode_test
+steps/diagnostic/analyze_lats.sh --cmd run.pl --iter final exp/tri3/graph exp/tri4_nnet_3/decode_test
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4_nnet_3/decode_test/log/analyze_alignments.log
+Overall, lattice depth (10,50,90-percentile)=(7,33,171) and mean=82.6
+steps/diagnostic/analyze_lats.sh: see stats in exp/tri4_nnet_3/decode_test/log/analyze_lattice_depth_stats.log
+score best paths
+score confidence and timing with sclite
+Decoding done.

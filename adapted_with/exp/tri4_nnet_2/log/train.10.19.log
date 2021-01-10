@@ -1,0 +1,11 @@
+# nnet-shuffle-egs --buffer-size=5000 --srand=10 ark:exp/tri4_nnet_2/egs/egs.19.0.ark ark:- | nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=10 exp/tri4_nnet_2/10.mdl ark:- exp/tri4_nnet_2/11.19.mdl 
+# Started at Tue Jan  5 19:01:33 EST 2021
+#
+nnet-shuffle-egs --buffer-size=5000 --srand=10 ark:exp/tri4_nnet_2/egs/egs.19.0.ark ark:- 
+nnet-train-parallel --num-threads=16 --minibatch-size=128 --srand=10 exp/tri4_nnet_2/10.mdl ark:- exp/tri4_nnet_2/11.19.mdl 
+LOG (nnet-shuffle-egs[5.5.863~1-813b7]:main():nnet-shuffle-egs.cc:102) Shuffled order of 34559 neural-network training examples using a buffer (partial randomization)
+LOG (nnet-train-parallel[5.5.863~1-813b7]:DoBackpropParallel():nnet-update-parallel.cc:194) Did backprop on 34559 examples, average log-prob per frame is -1.8347
+LOG (nnet-train-parallel[5.5.863~1-813b7]:DoBackpropParallel():nnet-update-parallel.cc:196) [this line is to be parsed by a script:] log-prob-per-frame=-1.8347
+LOG (nnet-train-parallel[5.5.863~1-813b7]:main():nnet-train-parallel.cc:102) Finished training, processed 34559 training examples (weighted).  Wrote model to exp/tri4_nnet_2/11.19.mdl
+# Accounting: time=17 threads=1
+# Ended (code 0) at Tue Jan  5 19:01:50 EST 2021, elapsed time 17 seconds
