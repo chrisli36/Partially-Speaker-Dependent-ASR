@@ -1,0 +1,17 @@
+# gmm-acc-stats-ali exp/tri2/10.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/7/utt2spk scp:data/train/split30/7/cmvn.scp scp:data/train/split30/7/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/6.mat ark:- ark:- |" "ark,s,cs:gunzip -c exp/tri2/ali.7.gz|" exp/tri2/10.7.acc 
+# Started at Tue Jan  5 21:22:33 EST 2021
+#
+gmm-acc-stats-ali exp/tri2/10.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/7/utt2spk scp:data/train/split30/7/cmvn.scp scp:data/train/split30/7/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2/6.mat ark:- ark:- |' 'ark,s,cs:gunzip -c exp/tri2/ali.7.gz|' exp/tri2/10.7.acc 
+transform-feats exp/tri2/6.mat ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/7/utt2spk scp:data/train/split30/7/cmvn.scp scp:data/train/split30/7/feats.scp ark:- 
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance FPAZ0_SI2223 avg. like is -52.3897 over 472 frames.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance FRLL0_SX164 avg. like is -55.2485 over 311 frames.
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 120 utterances, errors on 0
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -88.2856 over 37212 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 120 utterances; 0 had errors.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:112) Done 120 files, 0 with errors.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -52.004 over 37212 frames.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:123) Written accs.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Tue Jan  5 21:22:34 EST 2021, elapsed time 1 seconds

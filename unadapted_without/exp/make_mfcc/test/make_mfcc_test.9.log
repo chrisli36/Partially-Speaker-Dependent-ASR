@@ -1,0 +1,28 @@
+# compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/test/utt2dur.9 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.9.scp ark:- | copy-feats --write-num-frames=ark,t:exp/make_mfcc/test/utt2num_frames.9 --compress=true ark:- ark,scp:/home/christopher/kaldi/egs/timit/unadapted_without/mfcc/raw_mfcc_test.9.ark,/home/christopher/kaldi/egs/timit/unadapted_without/mfcc/raw_mfcc_test.9.scp 
+# Started at Wed Jan  6 05:31:58 EST 2021
+#
+compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/test/utt2dur.9 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/test/wav_test.9.scp ark:- 
+copy-feats --write-num-frames=ark,t:exp/make_mfcc/test/utt2num_frames.9 --compress=true ark:- ark,scp:/home/christopher/kaldi/egs/timit/unadapted_without/mfcc/raw_mfcc_test.9.ark,/home/christopher/kaldi/egs/timit/unadapted_without/mfcc/raw_mfcc_test.9.scp 
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MPAM0_SX19
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MPAM0_SX199
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MPAM0_SX289
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MPAM0_SX379
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SI1473
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SI2098
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SI838
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SX118
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SX208
+LOG (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:181) Processed 10 utterances
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SX28
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SX298
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTAS1_SX388
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTLS0_SI1370
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTLS0_SI2000
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTLS0_SI740
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTLS0_SX110
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTLS0_SX20
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MTLS0_SX200
+LOG (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:185)  Done 18 out of 18 utterances.
+LOG (copy-feats[5.5.863~1-813b7]:main():copy-feats.cc:143) Copied 18 feature matrices.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Wed Jan  6 05:31:59 EST 2021, elapsed time 1 seconds

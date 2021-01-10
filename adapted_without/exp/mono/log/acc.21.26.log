@@ -1,0 +1,14 @@
+# gmm-acc-stats-ali exp/mono/21.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/26/utt2spk scp:data/train/split30/26/cmvn.scp scp:data/train/split30/26/feats.scp ark:- | add-deltas  ark:- ark:- |" "ark:gunzip -c exp/mono/ali.26.gz|" exp/mono/21.26.acc 
+# Started at Wed Jan  6 01:24:40 EST 2021
+#
+gmm-acc-stats-ali exp/mono/21.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/26/utt2spk scp:data/train/split30/26/cmvn.scp scp:data/train/split30/26/feats.scp ark:- | add-deltas  ark:- ark:- |' 'ark:gunzip -c exp/mono/ali.26.gz|' exp/mono/21.26.acc 
+apply-cmvn --utt2spk=ark:data/train/split30/26/utt2spk scp:data/train/split30/26/cmvn.scp scp:data/train/split30/26/feats.scp ark:- 
+add-deltas ark:- ark:- 
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance MRSP0_SI2059 avg. like is -101.759 over 321 frames.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance MRXB0_SX145 avg. like is -99.8922 over 264 frames.
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 128 utterances, errors on 0
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:112) Done 128 files, 0 with errors.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -99.171 over 39121 frames.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:123) Written accs.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Jan  6 01:24:40 EST 2021, elapsed time 0 seconds

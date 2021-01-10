@@ -1,0 +1,53 @@
+# compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/dev/utt2dur.4 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/dev/wav_dev.4.scp ark:- | copy-feats --write-num-frames=ark,t:exp/make_mfcc/dev/utt2num_frames.4 --compress=true ark:- ark,scp:/home/christopher/kaldi/egs/timit/unadapted_with/mfcc/raw_mfcc_dev.4.ark,/home/christopher/kaldi/egs/timit/unadapted_with/mfcc/raw_mfcc_dev.4.scp 
+# Started at Tue Jan  5 21:06:09 EST 2021
+#
+compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/dev/utt2dur.4 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/dev/wav_dev.4.scp ark:- 
+copy-feats --write-num-frames=ark,t:exp/make_mfcc/dev/utt2num_frames.4 --compress=true ark:- ark,scp:/home/christopher/kaldi/egs/timit/unadapted_with/mfcc/raw_mfcc_dev.4.ark,/home/christopher/kaldi/egs/timit/unadapted_with/mfcc/raw_mfcc_dev.4.scp 
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SI1399
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SI2029
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SI769
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SX139
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SX229
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SX319
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SX409
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FNMR0_SX49
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SI1030
+LOG (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:181) Processed 10 utterances
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SI1280
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SI1910
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SX110
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SX20
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SX200
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SX290
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FREW0_SX380
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SI1198
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SI1828
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SI568
+LOG (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:181) Processed 20 utterances
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SX118
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SX208
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SX28
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SX298
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key FSEM0_SX388
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SI1946
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SI2095
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SI835
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SX115
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SX205
+LOG (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:181) Processed 30 utterances
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SX25
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SX295
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MAJC0_SX385
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SI1463
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SI2093
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SI833
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SX113
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SX203
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SX23
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SX293
+LOG (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:181) Processed 40 utterances
+VLOG[2] (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:182) Processed features for key MBDG0_SX383
+LOG (compute-mfcc-feats[5.5.863~1-813b7]:main():compute-mfcc-feats.cc:185)  Done 40 out of 40 utterances.
+LOG (copy-feats[5.5.863~1-813b7]:main():copy-feats.cc:143) Copied 40 feature matrices.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Tue Jan  5 21:06:10 EST 2021, elapsed time 1 seconds

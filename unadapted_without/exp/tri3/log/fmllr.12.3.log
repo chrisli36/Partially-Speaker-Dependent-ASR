@@ -1,0 +1,53 @@
+# ali-to-post "ark:gunzip -c exp/tri3/ali.3.gz|" ark:- | weight-silence-post 0.0 1 exp/tri3/12.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split30/3/spk2utt exp/tri3/12.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/3/utt2spk scp:data/train/split30/3/cmvn.scp scp:data/train/split30/3/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/3/utt2spk ark:exp/tri3/trans.3 ark:- ark:- |" ark:- ark:exp/tri3/tmp_trans.3 
+# Started at Wed Jan  6 05:55:20 EST 2021
+#
+weight-silence-post 0.0 1 exp/tri3/12.mdl ark:- ark:- 
+ali-to-post 'ark:gunzip -c exp/tri3/ali.3.gz|' ark:- 
+gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split30/3/spk2utt exp/tri3/12.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/3/utt2spk scp:data/train/split30/3/cmvn.scp scp:data/train/split30/3/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri2_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/3/utt2spk ark:exp/tri3/trans.3 ark:- ark:- |' ark:- ark:exp/tri3/tmp_trans.3 
+transform-feats --utt2spk=ark:data/train/split30/3/utt2spk ark:exp/tri3/trans.3 ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/3/utt2spk scp:data/train/split30/3/cmvn.scp scp:data/train/split30/3/feats.scp ark:- 
+transform-feats exp/tri2_ali/final.mat ark:- ark:- 
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.158284 per frame over 2479 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FDNC0, auxf-impr from fMLLR is 0.158284, over 2479 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.171318 per frame over 2414 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FDTD0, auxf-impr from fMLLR is 0.171318, over 2414 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.16692 per frame over 1911 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FDXW0, auxf-impr from fMLLR is 0.16692, over 1911 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.17783 per frame over 2258 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FEAC0, auxf-impr from fMLLR is 0.17783, over 2258 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.143141 per frame over 2284 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FEAR0, auxf-impr from fMLLR is 0.143141, over 2284 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.178643 per frame over 2512 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FECD0, auxf-impr from fMLLR is 0.178643, over 2512 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.150587 per frame over 2301 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FEEH0, auxf-impr from fMLLR is 0.150587, over 2301 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.160135 per frame over 2212 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FEME0, auxf-impr from fMLLR is 0.160135, over 2212 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.203758 per frame over 2197 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FETB0, auxf-impr from fMLLR is 0.203758, over 2197 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.186111 per frame over 2553 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FEXM0, auxf-impr from fMLLR is 0.186111, over 2553 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.180547 per frame over 1963 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FGCS0, auxf-impr from fMLLR is 0.180547, over 1963 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.22349 per frame over 2403 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FGDP0, auxf-impr from fMLLR is 0.22349, over 2403 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.15411 per frame over 2581 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FGMB0, auxf-impr from fMLLR is 0.15411, over 2581 frames.
+LOG (ali-to-post[5.5.863~1-813b7]:main():ali-to-post.cc:73) Converted 128 alignments.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.226736 per frame over 2472 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FGRW0, auxf-impr from fMLLR is 0.226736, over 2472 frames.
+LOG (weight-silence-post[5.5.863~1-813b7]:main():weight-silence-post.cc:95) Done 128 posteriors.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.167147 per frame over 2186 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FHLM0, auxf-impr from fMLLR is 0.167147, over 2186 frames.
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 128 utterances, errors on 0
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -88.0273 over 41786 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 128 utterances; 0 had errors.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average logdet is 1.93464 over 41786 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 128 utterances; 0 had errors.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.178602 per frame over 2378 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:143) For speaker FHXS0, auxf-impr from fMLLR is 0.178602, over 2378 frames.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:188) Done 128 files, 0 with no posts, 0 with other errors.
+LOG (gmm-est-fmllr[5.5.863~1-813b7]:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 0.176948 over 37104 frames.
+# Accounting: time=4 threads=1
+# Ended (code 0) at Wed Jan  6 05:55:24 EST 2021, elapsed time 4 seconds

@@ -1,0 +1,19 @@
+# align-equal-compiled "ark:gunzip -c exp/mono/fsts.20.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/20/utt2spk scp:data/train/split30/20/cmvn.scp scp:data/train/split30/20/feats.scp ark:- | add-deltas  ark:- ark:- |" ark,t:- | gmm-acc-stats-ali --binary=true exp/mono/0.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/20/utt2spk scp:data/train/split30/20/cmvn.scp scp:data/train/split30/20/feats.scp ark:- | add-deltas  ark:- ark:- |" ark:- exp/mono/0.20.acc 
+# Started at Tue Jan  5 21:06:21 EST 2021
+#
+align-equal-compiled 'ark:gunzip -c exp/mono/fsts.20.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/20/utt2spk scp:data/train/split30/20/cmvn.scp scp:data/train/split30/20/feats.scp ark:- | add-deltas  ark:- ark:- |' ark,t:- 
+gmm-acc-stats-ali --binary=true exp/mono/0.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split30/20/utt2spk scp:data/train/split30/20/cmvn.scp scp:data/train/split30/20/feats.scp ark:- | add-deltas  ark:- ark:- |' ark:- exp/mono/0.20.acc 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/20/utt2spk scp:data/train/split30/20/cmvn.scp scp:data/train/split30/20/feats.scp ark:- 
+add-deltas ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/20/utt2spk scp:data/train/split30/20/cmvn.scp scp:data/train/split30/20/feats.scp ark:- 
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:105) Processed 50 utterances; for utterance MKLS0_SI1533 avg. like is -108.652 over 191 frames.
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 120 utterances, errors on 0
+LOG (align-equal-compiled[5.5.863~1-813b7]:main():align-equal-compiled.cc:107) Success: done 120 utterances.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:105) Processed 100 utterances; for utterance MLEL0_SX166 avg. like is -111.985 over 425 frames.
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 120 utterances, errors on 0
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:112) Done 120 files, 0 with errors.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:115) Overall avg like per frame (Gaussian only) = -111.055 over 36806 frames.
+LOG (gmm-acc-stats-ali[5.5.863~1-813b7]:main():gmm-acc-stats-ali.cc:123) Written accs.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Tue Jan  5 21:06:22 EST 2021, elapsed time 1 seconds

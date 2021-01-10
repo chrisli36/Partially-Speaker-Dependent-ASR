@@ -1,0 +1,88 @@
+# gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --determinize-lattice=false --allow-partial=true --word-symbol-table=exp/tri3/graph/words.txt exp/tri3/final.mdl exp/tri3/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split5/1/utt2spk scp:data/test/split5/1/cmvn.scp scp:data/test/split5/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split5/1/utt2spk ark:exp/tri3/decode_test/pre_trans.1 ark:- ark:- |" "ark:|gzip -c > exp/tri3/decode_test/lat.tmp.1.gz" 
+# Started at Wed Jan  6 01:52:27 EST 2021
+#
+gmm-latgen-faster --max-active=7000 --beam=13.0 --lattice-beam=6.0 --acoustic-scale=0.083333 --determinize-lattice=false --allow-partial=true --word-symbol-table=exp/tri3/graph/words.txt exp/tri3/final.mdl exp/tri3/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split5/1/utt2spk scp:data/test/split5/1/cmvn.scp scp:data/test/split5/1/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split5/1/utt2spk ark:exp/tri3/decode_test/pre_trans.1 ark:- ark:- |' 'ark:|gzip -c > exp/tri3/decode_test/lat.tmp.1.gz' 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/test/split5/1/utt2spk scp:data/test/split5/1/cmvn.scp scp:data/test/split5/1/feats.scp ark:- 
+transform-feats exp/tri3/final.mat ark:- ark:- 
+transform-feats --utt2spk=ark:data/test/split5/1/utt2spk ark:exp/tri3/decode_test/pre_trans.1 ark:- ark:- 
+FDHC0_SI1559 sil dh iy z ih l iy v iy z ix cl p r aa cl k s ix m ey dx ih vcl d w uh dx iy w ix s f iy l iy n w ix th ih n ix n s eh l f sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SI1559 is -4.23828 over 338 frames.
+FDHC0_SI2189 sil iy s aa dh eh m ao w iy z cl t ix vcl g eh dx ix vcl d ow z iy er z sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SI2189 is -4.01576 over 223 frames.
+FDHC0_SI929 sil b ih cl t s eh cl ch cl k ey s ix z w er ix n ix cl p ae s cl t ae n y uw zh uw ax l sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SI929 is -4.10419 over 284 frames.
+FDHC0_SX119 sil dh ix m ih s cl k w ah w ix z r iy cl t r ae cl t ix vcl w ix th ix n ax cl p aa l ix vcl jh iy sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SX119 is -4.29156 over 301 frames.
+FDHC0_SX209 sil m ay cl k ow cl k ah l ih vcl d ix vcl b eh vcl d er m ao l ax th cl k r ey ay n z sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SX209 is -4.1692 over 255 frames.
+FDHC0_SX29 sil hh eh l cl g r ae vcl t ix cl p ih cl k ix cl p ae cl k ix v cl p ix cl t ey dx ih m z sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SX29 is -4.49896 over 252 frames.
+FDHC0_SX299 sil sh iy n iy ng cl k r iy m ix z ax cl p aa cl p iy l er aw ay dx ih m ay n hh aa l ax w ey n sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SX299 is -4.01414 over 319 frames.
+FDHC0_SX389 sil dh ey ah dx ix vcl b ih vcl iy hh aw s ix n dh er m ow cl t eh n cl t r iy s ay vcl d sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FDHC0_SX389 is -4.23101 over 244 frames.
+FELC0_SI1386 sil ih n w ey vcl sh en ix vcl g ow sh iy ey sh ix n s dh iy ix n vcl d ix s cl t r iy vcl b aa r cl k ix n s ix z ix y uw n ih cl w ix dh ix s ix n vcl g ow l iy ix ng y ix n sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SI1386 is -4.12082 over 550 frames.
+FELC0_SI2016 sil hh iy v aa n ow z r ow cl p s sil dh ax vcl b ow cl s cl k ah m ah n s cl t aw cl k sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SI2016 is -4.19239 over 338 frames.
+FELC0_SI756 sil m ix cl t ih r iy l ax s sil s er r eh n ix cl m ah l iy ng cl k l ey sil r eh vcl d w ay cl t ao r vcl b ah f sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SI756 is -4.21483 over 417 frames.
+FELC0_SX126 sil aa r dx ix f ih sh el ix n cl t eh l ax vcl jh ix n s ix s f er r iy l sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SX126 is -3.98288 over 289 frames.
+FELC0_SX216 sil dh ax s epi m ao l vcl b oy ix cl p ax cl t ax w er m ah ng hh aw cl k sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SX216 is -4.27737 over 218 frames.
+FELC0_SX306 sil ah cl ch ow z ix n f y uw w el vcl b iy cl k ah n vcl jh eh n er l s sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SX306 is -4.29757 over 248 frames.
+FELC0_SX36 sil ow n l iy vcl d ix m ah s cl t ix cl k aa m cl p l ix sh z aa r dx ah s ax vcl t ey n cl p aa cl p ih l eh r ix dx iy sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SX36 is -4.32087 over 350 frames.
+FELC0_SX396 sil dh ix f ih sh cl p ix vcl g eh n cl t ax l iy cl p r ae n cl t ix cl k l iy ah n ax s eh er f ax s ax v dh ax s epi m ow l ay cl k sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FELC0_SX396 is -4.30823 over 380 frames.
+FJLM0_SI1043 sil n aa cl s ax cl p r ay z ix ng l iy sil dh ih s ix cl p r ow cl ch vcl d ih vcl n aa w ay er cl k sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FJLM0_SI1043 is -3.9957 over 340 frames.
+FJLM0_SI1673 sil w ah n th ih ng cl k hh iy th ao cl sil n ow vcl b ay dx iy n ow z ax vcl b ae dx ih y eh cl sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FJLM0_SI1673 is -4.04438 over 314 frames.
+FJLM0_SX53 sil iy v ix n ah s ih m cl p el v ah cl k ae vcl b ih l eh r iy cl k ix n cl t ey n s ih m el z sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FJLM0_SX53 is -4.09423 over 308 frames.
+FMGD0_SI1564 sil hh eh z vcl d ix n vcl g r iy w ix z vcl d aw n ih vcl b ay s epi n ey cl k r eh l f ae n s ih z ae n vcl d eh r w er vcl g r ey z ix ng cl k ae dx eh l sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SI1564 is -4.26168 over 442 frames.
+FMGD0_SI2194 sil hh iy hh ae vcl f l ow ih n cl t uw ix s ao th vcl jh aa vcl sil ix n aw dx ih vcl jh aa vcl w ix z cl k el ah n ix n iy w ix s cl t r ae n vcl d ix vcl sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SI2194 is -4.08221 over 470 frames.
+FMGD0_SI934 sil ax th ao r iy s ey cl p eh dx ax l s cl t er z aa r ix cl p r ay m cl k aa r vcl ix cl sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SI934 is -4.09416 over 346 frames.
+FMGD0_SX124 sil aa vcl jh ix cl k s epi m ey dx ix v cl p y uw dx er aa r vcl b y uw dx ax f el sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SX124 is -4.0222 over 373 frames.
+FMGD0_SX214 sil dh ax m ao r n iy ng vcl d uw ah n ix s vcl b ay dx er w eh vcl k l ih s ih n vcl d ih n ix s ah n sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SX214 is -3.96008 over 301 frames.
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 35 utterances, errors on 0
+FMGD0_SX304 sil sh iy s vcl d aa cl k iy ng s r ah n dh ax f er s cl t ay n dh eh r w ao r n sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SX304 is -4.05432 over 278 frames.
+FMGD0_SX34 sil d ow n cl d uw cl t r ah l iy s cl t er dx iy vcl d ih sh ix s sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SX34 is -4.18068 over 234 frames.
+FMGD0_SX394 sil k ae l s iy m ey cl k s cl p ow n s ix n cl t iy cl t s cl t r ao ng sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMGD0_SX394 is -4.164 over 234 frames.
+FMLD0_SI2185 sil sh iy s ih cl ch aa r cl k s eh v n ow vcl b ow n s ix n sh r eh n cl s epi w ae m vcl b ae cl k w er vcl sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SI2185 is -4.28442 over 356 frames.
+FMLD0_SI822 sil m ow cl t er vcl d eh cl k sh ix n ey vcl b iy ix ng cl k r iy s cl p eh dx iy ae n cl t ey n f eh cl t ix cl p r aa r cl p r iy s ix vcl d ix s cl t r ah vcl d sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SI822 is -4.50152 over 363 frames.
+FMLD0_SI925 sil ax hh iy w ix z ix n cl k ah s cl t ix vcl d iy ix z epi w ay cl t ix vcl b ao r s cl t ix n sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SI925 is -4.5616 over 210 frames.
+FMLD0_SX115 sil dh iy ix n l ax n vcl d ix cl t ih cl k s dh iy ix cl k r aa cl p l ax z ao l ax vcl g ow sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SX115 is -4.50629 over 237 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -88.1809 over 10803 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 35 utterances; 0 had errors.
+FMLD0_SX205 sil dh ax l ix cl t ih er cl p er s ix n eh l er cl k s cl p eh cl t ix cl t uw ow cl p ey vcl g ah v er m ix n ao r dx er z sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SX205 is -4.21154 over 305 frames.
+FMLD0_SX25 sil ow n l iy l oy er s l ah v n l iy ix n ix n cl s sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SX25 is -4.27922 over 189 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average logdet is 0.924058 over 10803 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 35 utterances; 0 had errors.
+FMLD0_SX295 sil ih f cl k eh r ow cl k ah m s cl t ax m aa r hh eh v er r ey n sh f er er m iy dx iy ix cl t uw sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SX295 is -4.17955 over 308 frames.
+FMLD0_SX385 sil hh iy s sh el vcl d er f eh l cl t ix z ix f ix cl w er vcl b r ow cl k ix n sil 
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:DecodeUtteranceLatticeFaster():decoder-wrappers.cc:375) Log-like per frame for utterance FMLD0_SX385 is -4.73543 over 189 frames.
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:main():gmm-latgen-faster.cc:176) Time taken 24.2999s: real-time factor assuming 100 frames/sec is 0.224936
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:main():gmm-latgen-faster.cc:179) Done 35 utterances, failed for 0
+LOG (gmm-latgen-faster[5.5.863~1-813b7]:main():gmm-latgen-faster.cc:181) Overall log-likelihood per frame is -4.20033 over 10803 frames.
+# Accounting: time=25 threads=1
+# Ended (code 0) at Wed Jan  6 01:52:52 EST 2021, elapsed time 25 seconds

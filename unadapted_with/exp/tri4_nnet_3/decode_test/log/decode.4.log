@@ -1,0 +1,98 @@
+# nnet-latgen-faster-parallel --num-threads=6 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri3/graph/words.txt exp/tri4_nnet_3/final.mdl exp/tri3/graph/HCLG.fst "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split5/4/utt2spk scp:data/test/split5/4/cmvn.scp scp:data/test/split5/4/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri4_nnet_3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split5/4/utt2spk ark:exp/tri3/decode_test/trans.4 ark:- ark:- |" "ark:|gzip -c > exp/tri4_nnet_3/decode_test/lat.4.gz" 
+# Started at Wed Jan  6 01:11:06 EST 2021
+#
+nnet-latgen-faster-parallel --num-threads=6 --minimize=false --max-active=7000 --min-active=200 --beam=15.0 --lattice-beam=8.0 --acoustic-scale=0.1 --allow-partial=true --word-symbol-table=exp/tri3/graph/words.txt exp/tri4_nnet_3/final.mdl exp/tri3/graph/HCLG.fst 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split5/4/utt2spk scp:data/test/split5/4/cmvn.scp scp:data/test/split5/4/feats.scp ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri4_nnet_3/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split5/4/utt2spk ark:exp/tri3/decode_test/trans.4 ark:- ark:- |' 'ark:|gzip -c > exp/tri4_nnet_3/decode_test/lat.4.gz' 
+apply-cmvn --utt2spk=ark:data/test/split5/4/utt2spk scp:data/test/split5/4/cmvn.scp scp:data/test/split5/4/feats.scp ark:- 
+transform-feats --utt2spk=ark:data/test/split5/4/utt2spk ark:exp/tri3/decode_test/trans.4 ark:- ark:- 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+transform-feats exp/tri4_nnet_3/final.mat ark:- ark:- 
+MKLT0_SI1213 sil m ay l m ix cl k s cl t eh r ix cl s ix z hh ao l ax cl s ix n cl p l er l ay m z sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SI1213 is 0.146041 over 246 frames.
+MKLT0_SI1843 sil sh ix w ix z r eh dx ih f ao er vcl g r eh dx ix vcl b ih cl ch er z ix n vcl d er r aa dx el ax v er m ow w el cl p aa r n sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SI1843 is 0.127283 over 322 frames.
+MKLT0_SI583 sil dh ih s epi w ix cl k ix n s ix cl p ax th eh dx ix cl k l iy ix n ax s cl t ey sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SI583 is 0.155483 over 226 frames.
+MKLT0_SX133 sil ix cl t er iy er z ix cl k en dh iy m ix f ao r cl k w ih vcl g l ix cl ch sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SX133 is 0.125048 over 262 frames.
+MKLT0_SX223 sil dh ax cl t ax vcl b uh cl ch ix vcl b l aa cl t ey vcl w ah n dh ix vcl g er aa vcl jh sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SX223 is 0.13946 over 218 frames.
+MKLT0_SX313 sil g r aa f aa f ao m z ix n dh ax vcl b aa cl ch epi w ax f w iy vcl g uw l aw th sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SX313 is 0.174633 over 320 frames.
+MKLT0_SX403 sil ax w ao r vcl d r ow cl k en s ih s cl t ax v ao n l iy s cl k er cl s ix n vcl b l ay l z ix z sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SX403 is 0.148414 over 273 frames.
+MKLT0_SX43 sil eh l dh ax l ih cl p iy vcl b ao er ao f ax n ix cl k s cl k uh vcl d ix vcl d sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MKLT0_SX43 is 0.134465 over 200 frames.
+MLLL0_SI1363 sil s ah l iy s cl p ix cl k ix l ey sh en s epi m iy eh s ah m eh r ix cl sil ah dh er zh s ah n l ih m vcl b iy y ix s sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SI1363 is 0.193129 over 497 frames.
+MLLL0_SI1993 sil sh ix sh iy w ey cl k ih m sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SI1993 is 0.223046 over 246 frames.
+MLLL0_SI733 sil t uw v oy cl p aa n cl t r ix n er cl k ah dx ih n cl t ix n iy cl s cl t eh s dh ax m sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SI733 is 0.196834 over 433 frames.
+MLLL0_SX103 sil k ao dx ih m uw n s f er m ah dx ix cl k el s ix s cl t ix n s sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SX103 is 0.15341 over 232 frames.
+MLLL0_SX13 sil s epi w iy ng y er aa r ih s hh ay z ix cl k ae n sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SX13 is 0.252285 over 271 frames.
+MLLL0_SX193 sil w ay vcl b ay ao l eh l sil w ix n y ow n zh uw z m ay m sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SX193 is 0.225287 over 347 frames.
+MLLL0_SX283 sil p l ey n vcl d cl p eh er vcl g uh dx ao r ih z ey sh en s cl p r ow cl b er f cl k en cl t r el sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SX283 is 0.166308 over 380 frames.
+MLLL0_SX373 sil ax vcl b ao r ix n ao dx el ix z ix s ax cl p er v s ix cl k en cl p eh l sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLLL0_SX373 is 0.196416 over 278 frames.
+MLNT0_SI1574 sil p l ay s epi w ao n er r aw n dh ax vcl b ow l ax cl p l eh n cl t ax l z ix n w ih cl ch iy m aa cl sil dh ey cl sil b ay cl p er ey ix cl t sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SI1574 is 0.182722 over 476 frames.
+MLNT0_SI1902 sil dh ax cl p l ao s ix n vcl g l ow v ax s er r eh cl t sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SI1902 is 0.172366 over 185 frames.
+MLNT0_SI642 sil dh eh r cl p aa cl s cl p er cl t uw v s cl t eh cl l ae dx er z ah cl ch eh er eh n aa cl p aa m f ae n sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SI642 is 0.20329 over 407 frames.
+MLNT0_SX102 sil s cl p eh sh uh cl t ae s f ao r s ix z r eh s cl k y uw hh aa s cl t ix vcl jh ix z f er m cl k ih cl m ae cl p er s sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SX102 is 0.212365 over 365 frames.
+MLNT0_SX12 sil w ow r aa vcl b ix n w eh er eh y ow l ih l iy sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SX12 is 0.213677 over 230 frames.
+MLNT0_SX192 sil s cl t r ao hh ae s cl k er aw er f ae sh ix n vcl d ih sh iy er sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SX192 is 0.22329 over 231 frames.
+MLNT0_SX282 sil dh ix cl t uw th cl k er iy f er vcl g ae cl t ix cl k aa n ax n r ay dx er s cl t uw th eh l aw cl t sil 
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 40 utterances, errors on 0
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SX282 is 0.170414 over 317 frames.
+MLNT0_SX372 sil dh eh vcl d ay vcl g er m ey cl k s eh n s cl p oy n l iy ae f cl t er m ah cl ch cl t eh dx iy sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MLNT0_SX372 is 0.212084 over 309 frames.
+MNJM0_SI1580 sil hh iy ao l iy s ey n cl t ax hh ae l m ah n ix n cl k ix n ix s cl p aa cl k ix cl sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SI1580 is 0.179965 over 298 frames.
+MNJM0_SI2210 sil n ao r iy cl t er n ae vcl g r eh s epi w ah cl s ax w er sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SI2210 is 0.158378 over 202 frames.
+MNJM0_SI950 sil ae s ah cl ch sil ix w ax z vcl b iy aa m cl p aa l ax th ih cl s ix n hh ae vcl n ow n iy dx ix vcl jh eh s ax v ax cl k ey sh ix n sil b ay ey m ae s ix vcl jh sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SI950 is 0.221527 over 545 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -88.0273 over 12320 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 40 utterances; 0 had errors.
+MNJM0_SX140 sil ae dx ih cl k aa l cl t r ow cl p r aa dx ah cl s aa r aa n iy v ax l iy dh ix sh ix v ix vcl sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SX140 is 0.149107 over 288 frames.
+MNJM0_SX230 sil ah l aw l iy w ey hh ih er vcl b ah r ae sh en l ay z ao l eh er z sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SX230 is 0.295834 over 353 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average logdet is 2.26929 over 12320 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 40 utterances; 0 had errors.
+MNJM0_SX320 sil dh ix n eh r ix s ah n ix vcl g aa vcl d sil m ih n aa vcl b uw ax th ax w aa cl k ix ng cl t ih s dh ax n s sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SX320 is 0.180923 over 379 frames.
+MNJM0_SX410 sil g r ey vcl b ay z f r eh sh epi n ow cl k iy cl ch epi w iy cl dh ey m ao r ix ng sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SX410 is 0.241837 over 273 frames.
+MNJM0_SX50 sil k ae dx ah s cl t ao f ih cl k eh cl k ix n aa m ix cl k ah cl p ae cl k s dh ix vcl g l ae cl dh ax cl p ao r sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MNJM0_SX50 is 0.213493 over 338 frames.
+MPAM0_SI1189 sil ey cl f y ow vcl g ah n z er cl k ae cl ch er dx ix n cl p ix z ih sh en sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SI1189 is 0.212958 over 253 frames.
+MPAM0_SI1819 sil hh iy r ah vcl b ih z ay s l iy cl p ax l iy w ix th epi w ah n hh y uw vcl jh cl p ao l sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SI1819 is 0.238022 over 284 frames.
+MPAM0_SI1961 sil ax s eh cl k ix vcl t w ih cl ch cl t ix sh er s l iy v sil ix n iy f eh l cl t ax vcl b r iy v vcl b er n ix z ah vcl b r aa r m sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SI1961 is 0.196387 over 440 frames.
+MPAM0_SX109 sil sh ix s l ih cl t ix n s cl p r ey n vcl d r ae ng cl k el ax n dh ix s cl t iy vcl jh s l ow cl p sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SX109 is 0.17474 over 292 frames.
+MPAM0_SX19 sil ax l ow n ax m s ow v w er cl k ix n ao f en vcl b iy f l ih m z iy sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SX19 is 0.195527 over 235 frames.
+MPAM0_SX199 sil y ah m cl ch ow dx ix n cl ch ix dx ix v oy vcl d ix cl k s cl p ow zh er cl t ax cl k ix n cl t ey vcl jh ix s cl t ix z iy z ix z sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SX199 is 0.177926 over 350 frames.
+MPAM0_SX289 sil w ah dh ix cl p er v cl k ax l ao sh ix z er v er y uw z f el ix n s iy aw sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SX289 is 0.200216 over 269 frames.
+MPAM0_SX379 sil t ae m vcl g ih v vcl d r ay dx ix m ah s en z ax n cl t er z vcl d ey s sil 
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:~DecodeUtteranceLatticeFasterClass():decoder-wrappers.cc:180) Log-like per frame for utterance MPAM0_SX379 is 0.132782 over 250 frames.
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:main():nnet-latgen-faster-parallel.cc:191) Time taken 135.688s: real-time factor per thread assuming 100 frames/sec is 6.60817
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:main():nnet-latgen-faster-parallel.cc:194) Done 40 utterances, failed for 0
+LOG (nnet-latgen-faster-parallel[5.5.863~1-813b7]:main():nnet-latgen-faster-parallel.cc:196) Overall log-likelihood per frame is 0.190632 over 12320 frames.
+# Accounting: time=136 threads=1
+# Ended (code 0) at Wed Jan  6 01:13:22 EST 2021, elapsed time 136 seconds

@@ -1,0 +1,23 @@
+# ali-to-post "ark:gunzip -c exp/tri3_ali/ali.7.gz|" ark:- | weight-silence-post 0.0 1 exp/tri3_ali/final.mdl ark:- ark:- | acc-lda --rand-prune=4.0 exp/tri3_ali/final.mdl "ark,s,cs:utils/subset_scp.pl --quiet 333 data/train/split30/7/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split30/7/utt2spk scp:data/train/split30/7/cmvn.scp scp:- ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri4_nnet_2/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/7/utt2spk ark:exp/tri3_ali/trans.7 ark:- ark:- | splice-feats --left-context=4 --right-context=4 ark:- ark:- |" ark,s,cs:- exp/tri4_nnet_2/lda.7.acc 
+# Started at Wed Jan  6 03:06:28 EST 2021
+#
+ali-to-post 'ark:gunzip -c exp/tri3_ali/ali.7.gz|' ark:- 
+weight-silence-post 0.0 1 exp/tri3_ali/final.mdl ark:- ark:- 
+acc-lda --rand-prune=4.0 exp/tri3_ali/final.mdl 'ark,s,cs:utils/subset_scp.pl --quiet 333 data/train/split30/7/feats.scp | apply-cmvn  --utt2spk=ark:data/train/split30/7/utt2spk scp:data/train/split30/7/cmvn.scp scp:- ark:- | splice-feats --left-context=3 --right-context=3 ark:- ark:- | transform-feats exp/tri4_nnet_2/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split30/7/utt2spk ark:exp/tri3_ali/trans.7 ark:- ark:- | splice-feats --left-context=4 --right-context=4 ark:- ark:- |' ark,s,cs:- exp/tri4_nnet_2/lda.7.acc 
+splice-feats --left-context=3 --right-context=3 ark:- ark:- 
+splice-feats --left-context=4 --right-context=4 ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split30/7/utt2spk scp:data/train/split30/7/cmvn.scp scp:- ark:- 
+transform-feats --utt2spk=ark:data/train/split30/7/utt2spk ark:exp/tri3_ali/trans.7 ark:- ark:- 
+transform-feats exp/tri4_nnet_2/final.mat ark:- ark:- 
+LOG (acc-lda[5.5.863~1-813b7]:main():acc-lda.cc:114) Done 100 utterances.
+LOG (ali-to-post[5.5.863~1-813b7]:main():ali-to-post.cc:73) Converted 128 alignments.
+LOG (weight-silence-post[5.5.863~1-813b7]:main():weight-silence-post.cc:95) Done 128 posteriors.
+LOG (apply-cmvn[5.5.863~1-813b7]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 128 utterances, errors on 0
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -88.1809 over 40307 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 128 utterances; 0 had errors.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:158) Overall average logdet is 1.2287 over 40307 frames.
+LOG (transform-feats[5.5.863~1-813b7]:main():transform-feats.cc:161) Applied transform to 128 utterances; 0 had errors.
+LOG (acc-lda[5.5.863~1-813b7]:main():acc-lda.cc:117) Done 128 files, failed for 0
+LOG (acc-lda[5.5.863~1-813b7]:main():acc-lda.cc:122) Written statistics.
+# Accounting: time=2 threads=1
+# Ended (code 0) at Wed Jan  6 03:06:30 EST 2021, elapsed time 2 seconds

@@ -1,0 +1,19 @@
+# gmm-est --write-occs=exp/mono/14.occs --mix-up=480 --power=0.25 exp/mono/13.mdl "gmm-sum-accs - exp/mono/13.*.acc|" exp/mono/14.mdl 
+# Started at Wed Jan  6 05:35:34 EST 2021
+#
+gmm-est --write-occs=exp/mono/14.occs --mix-up=480 --power=0.25 exp/mono/13.mdl 'gmm-sum-accs - exp/mono/13.*.acc|' exp/mono/14.mdl 
+gmm-sum-accs - exp/mono/13.1.acc exp/mono/13.10.acc exp/mono/13.11.acc exp/mono/13.12.acc exp/mono/13.13.acc exp/mono/13.14.acc exp/mono/13.15.acc exp/mono/13.16.acc exp/mono/13.17.acc exp/mono/13.18.acc exp/mono/13.19.acc exp/mono/13.2.acc exp/mono/13.20.acc exp/mono/13.21.acc exp/mono/13.22.acc exp/mono/13.23.acc exp/mono/13.24.acc exp/mono/13.25.acc exp/mono/13.26.acc exp/mono/13.27.acc exp/mono/13.28.acc exp/mono/13.29.acc exp/mono/13.3.acc exp/mono/13.30.acc exp/mono/13.4.acc exp/mono/13.5.acc exp/mono/13.6.acc exp/mono/13.7.acc exp/mono/13.8.acc exp/mono/13.9.acc 
+LOG (gmm-sum-accs[5.5.863~1-813b7]:main():gmm-sum-accs.cc:63) Summed 30 stats, total count 1.12482e+06, avg like/frame -100.373
+LOG (gmm-sum-accs[5.5.863~1-813b7]:main():gmm-sum-accs.cc:66) Total count of stats is 1.12482e+06
+LOG (gmm-sum-accs[5.5.863~1-813b7]:main():gmm-sum-accs.cc:67) Written stats to -
+LOG (gmm-est[5.5.863~1-813b7]:MleUpdate():transition-model.cc:528) TransitionModel::Update, objf change is 0 per frame over 1.12482e+06 frames. 
+LOG (gmm-est[5.5.863~1-813b7]:MleUpdate():transition-model.cc:531) 1 probabilities floored, 0 out of 144 transition-states skipped due to insuffient data (it is normal to have some skipped.)
+LOG (gmm-est[5.5.863~1-813b7]:main():gmm-est.cc:102) Transition model update: Overall 0 log-like improvement per frame over 1.12482e+06 frames.
+LOG (gmm-est[5.5.863~1-813b7]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:225) 0 variance elements floored in 0 Gaussians, out of 452
+LOG (gmm-est[5.5.863~1-813b7]:MleAmDiagGmmUpdate():mle-am-diag-gmm.cc:229) Removed 0 Gaussians due to counts < --min-gaussian-occupancy=10 and --remove-low-count-gaussians=true
+LOG (gmm-est[5.5.863~1-813b7]:main():gmm-est.cc:113) GMM update: Overall 0.0603137 objective function improvement per frame over 1.12482e+06 frames
+LOG (gmm-est[5.5.863~1-813b7]:main():gmm-est.cc:116) GMM update: Overall avg like per frame = -100.373 over 1.12482e+06 frames.
+LOG (gmm-est[5.5.863~1-813b7]:SplitByCount():am-diag-gmm.cc:116) Split 144 states with target = 480, power = 0.25, perturb_factor = 0.01 and min_count = 20, split #Gauss from 452 to 480
+LOG (gmm-est[5.5.863~1-813b7]:main():gmm-est.cc:146) Written model to exp/mono/14.mdl
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Jan  6 05:35:34 EST 2021, elapsed time 0 seconds
