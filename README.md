@@ -8,4 +8,4 @@ trained during experimentation, and that replicating this project
 would require the deletion of the exp and data directories.
 
 This is the poster presentation that was used for the 2021 Virtual ISEF
-<img src="https://github.com/YUP36/Partially-Speaker-Dependent-ASR/blob/main/Quad Chart.png">
+<img src="https://github.com/chrisli36/Partially-Speaker-Dependent-ASR/blob/main/Quad Chart.png">
